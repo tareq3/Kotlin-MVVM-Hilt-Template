@@ -8,7 +8,7 @@ plugins {
 }
 
 android {
-    compileSdkVersion 30
+    compileSdkVersion 32
     buildToolsVersion "30.0.3"
 
     buildFeatures {
@@ -18,7 +18,7 @@ android {
     defaultConfig {
         applicationId "com.mrthiago.kotlinmvvmhilttemplate"
         minSdkVersion 21
-        targetSdkVersion 30
+        targetSdkVersion 32
         versionCode 1
         versionName "1.0"
 
@@ -46,19 +46,19 @@ android {
 
 dependencies {
     // Base library
-    implementation 'androidx.core:core-ktx:1.3.2'
-    implementation 'androidx.appcompat:appcompat:1.2.0'
-    implementation 'com.google.android.material:material:1.3.0'
-    implementation 'androidx.constraintlayout:constraintlayout:2.0.4'
+    implementation 'androidx.core:core-ktx:1.7.0'
+    implementation 'androidx.appcompat:appcompat:1.4.1'
+    implementation 'com.google.android.material:material:1.5.0'
+    implementation 'androidx.constraintlayout:constraintlayout:2.1.3'
 
     // ViewModel and LiveData
-    def lifecycle_version = "2.3.1"
+    def lifecycle_version = "2.4.1"
     implementation "androidx.lifecycle:lifecycle-viewmodel-ktx:$lifecycle_version"
     implementation "androidx.lifecycle:lifecycle-livedata-ktx:$lifecycle_version"
     implementation "androidx.lifecycle:lifecycle-common-java8:$lifecycle_version"
 
     // Navigation Component
-    def nav_version = "2.3.4"
+    def nav_version = "2.4.1"
     implementation "androidx.navigation:navigation-fragment-ktx:$nav_version"
     implementation "androidx.navigation:navigation-ui-ktx:$nav_version"
 
@@ -68,7 +68,7 @@ dependencies {
     implementation "org.jetbrains.kotlinx:kotlinx-coroutines-android:$coroutines_version"
 
     // Coroutine Lifecycle Scopes
-    def coroutines_lifecycle_version = "2.3.1"
+    def coroutines_lifecycle_version = "2.4.1"
     implementation "androidx.lifecycle:lifecycle-viewmodel-ktx:$coroutines_lifecycle_version"
     implementation "androidx.lifecycle:lifecycle-runtime-ktx:$coroutines_lifecycle_version"
 
@@ -80,13 +80,14 @@ dependencies {
     implementation "com.squareup.okhttp3:logging-interceptor:$okhttp3_version"
 
     //Dagger - Hilt
-    def hilt_version = "2.31.2-alpha"
+    def hilt_version = "2.38.1"
     implementation "com.google.dagger:hilt-android:$hilt_version"
-    kapt "com.google.dagger:hilt-android-compiler:$hilt_version"
+   // kapt "com.google.dagger:hilt-android-compiler:$hilt_version"
+    kapt "com.google.dagger:hilt-compiler:$hilt_version"
 
-    def hilt_viewmodel_version = "1.0.0-alpha03"
-    implementation "androidx.hilt:hilt-lifecycle-viewmodel:$hilt_viewmodel_version"
-    kapt "androidx.hilt:hilt-compiler:$hilt_viewmodel_version"
+//    def hilt_viewmodel_version = "1.0.0-alpha03"
+//    implementation "androidx.hilt:hilt-lifecycle-viewmodel:$hilt_viewmodel_version"
+//    kapt "androidx.hilt:hilt-compiler:$hilt_viewmodel_version"
 
     // Glide
     def glide_version = "4.11.0"
@@ -95,16 +96,16 @@ dependencies {
 
     // Testing dependencies
     testImplementation 'junit:junit:4.13.2'
-    testImplementation "androidx.test.ext:junit-ktx:1.1.2"
+    testImplementation "androidx.test.ext:junit-ktx:1.1.3"
     testImplementation "androidx.arch.core:core-testing:2.1.0"
     testImplementation 'org.json:json:20180813'
-    testImplementation "com.google.truth:truth:1.1.2"
+    testImplementation "com.google.truth:truth:1.1.3"
 
-    androidTestImplementation 'androidx.test.ext:junit:1.1.2'
-    androidTestImplementation 'androidx.test.espresso:espresso-core:3.3.0'
-    androidTestImplementation 'androidx.test:core-ktx:1.3.0'
-    androidTestImplementation "com.google.truth:truth:1.1.2"
-    androidTestImplementation "androidx.work:work-testing:2.5.0"
+    androidTestImplementation 'androidx.test.ext:junit:1.1.3'
+    androidTestImplementation 'androidx.test.espresso:espresso-core:3.4.0'
+    androidTestImplementation 'androidx.test:core-ktx:1.4.0'
+    androidTestImplementation "com.google.truth:truth:1.1.3"
+    androidTestImplementation "androidx.work:work-testing:2.7.1"
     kaptAndroidTest "com.google.dagger:hilt-android-compiler:$hilt_version"
     androidTestImplementation "com.google.dagger:hilt-android-testing:$hilt_version"
 }
