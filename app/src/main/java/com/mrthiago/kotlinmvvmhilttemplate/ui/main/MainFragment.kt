@@ -9,7 +9,6 @@ import androidx.fragment.app.viewModels
 import com.bumptech.glide.RequestManager
 import com.mrthiago.kotlinmvvmhilttemplate.R
 import com.mrthiago.kotlinmvvmhilttemplate.databinding.MainFragmentBinding
-import com.mrthiago.kotlinmvvmhilttemplate.viewmodels.MainViewModel
 import dagger.hilt.android.AndroidEntryPoint
 import javax.inject.Inject
 
@@ -30,8 +29,10 @@ class MainFragment : Fragment() {
         return binding.root
     }
 
-    override fun onActivityCreated(savedInstanceState: Bundle?) {
-        super.onActivityCreated(savedInstanceState)
+
+
+    override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
+        super.onViewCreated(view, savedInstanceState)
         // TODO: Use the ViewModel
 
         (viewModel.helloWorld + " - MainFragment").also { binding.message.text = it }

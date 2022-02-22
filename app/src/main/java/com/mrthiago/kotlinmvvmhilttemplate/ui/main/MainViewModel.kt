@@ -1,4 +1,4 @@
-package com.mrthiago.kotlinmvvmhilttemplate.viewmodels
+package com.mrthiago.kotlinmvvmhilttemplate.ui.main
 
 import android.util.Log
 import androidx.lifecycle.ViewModel

@@ -1,4 +1,4 @@
-package com.mrthiago.kotlinmvvmhilttemplate.ui
+package com.mrthiago.kotlinmvvmhilttemplate.ui.main
 
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
