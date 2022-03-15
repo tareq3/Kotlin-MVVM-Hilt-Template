@@ -13,4 +13,4 @@ The Clean Code Blog by "Uncle Bob" ->  https://blog.cleancoder.com/uncle-bob/201
 
 ---	
 ## Screenshots
-| ![1](screenshots/Screenshot_1.png) | ![2](screenshots/Screenshot_2.png) |
+| ![1](screenshots/) | ![2](screenshots/Screenshot_2.png) |
